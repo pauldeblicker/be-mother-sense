@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 router.post('/mother/temperatures', function(req, res) {
   console.log(cookies[req.body.nodeUid]);
   console.log(req.body.dateEvent);
-  console.log(req.body.centidegreeCelsius);
+  console.log(req.body.data.centidegreeCelsius);
   res.sendStatus(200);
 });
 
