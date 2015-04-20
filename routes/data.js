@@ -6,7 +6,7 @@ var Motion = require('../models/motion');
 
 /* GET users listing. */
 router.get('/temperature/:cookie', function(req, res, next) {
-  var date = Date.now();
+  var date = new Date();
   date.setDate(date.getDate()-1);
   Temperature.find({'cookie': req.params.cookie, 'date': {$gte: date}})
     .sort({'date': -1})
@@ -22,7 +22,7 @@ router.get('/temperature/:cookie', function(req, res, next) {
 });
 
 router.get('/motion/:cookie', function(req, res, next) {
-  var date = Date.now();
+  var date = new Date();
   date.setDate(date.getDate()-1);
   Motion.find({'cookie': req.params.cookie, 'date': {$gte: date}})
     .sort({'date': -1})
