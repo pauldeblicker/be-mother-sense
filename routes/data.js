@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var Temperature = require('./models/temperature');
-var Motion = require('./models/motion');
+var Temperature = require('../models/temperature');
+var Motion = require('../models/motion');
 
 /* GET users listing. */
 router.get('/temperature/:cookie', function(req, res, next) {
